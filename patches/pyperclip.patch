@@ -1,0 +1,32 @@
+---
+ src/pypass.py       | 4 ++--
+ src/requirments.txt | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/pypass.py b/src/pypass.py
+index 2e45312..f2759be 100644
+--- a/src/pypass.py
++++ b/src/pypass.py
+@@ -1,4 +1,4 @@
+-import argparse
++import argparse , pyperclip
+ from pykeepass import PyKeePass
+ parser = argparse.ArgumentParser()
+ parser.add_argument("--query", required=True,help="Title of entry which you are looking for.(Case sensitive)")
+@@ -7,4 +7,4 @@ args = parser.parse_args()
+ pm = PyKeePass('db.kdbx', password=args.password)       
+ entry = pm.find_entries(title=args.query,first=True)
+ print(entry) 
+-print(entry.password)
++pyperclip.copy(entry.password)
+diff --git a/src/requirments.txt b/src/requirments.txt
+index 3dd167e..0177c77 100644
+--- a/src/requirments.txt
++++ b/src/requirments.txt
+@@ -1,2 +1,3 @@
+ argparse
+ pykeepass 
++pyperclip
+-- 
+2.32.0
+
