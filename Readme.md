@@ -1,6 +1,6 @@
 ## About
 
-PyTenPass is a non interactive read only keepass compataible password manager.
+PyTenPass is a non-interactive read only keepass compataible password manager.
 
 ## Features
 
@@ -14,9 +14,9 @@ PyTenPass is a non interactive read only keepass compataible password manager.
 
 * It contains less than 10 lines of python code. Which  makes it easier to audit and download.
 
-* Completely non interactive.
+* Completely non-interactive.
 
 
-## Installation  & Usage.
+## Installation & Usage.
 
 See [Wiki](https://github.com/defaultpfp/pytenpass/wiki)   
